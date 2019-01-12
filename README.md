@@ -1,5 +1,6 @@
 # market-to-unemployment
 Files in the Repository:
+
     1) Data Folder:
         (a) Web-Scraping Folder: CSV files from web-scraping
             * SPY.csv
