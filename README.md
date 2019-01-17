@@ -14,9 +14,9 @@ Files in the Repository:
 
     1) Data Folder:
         (a) Web-Scraping Folder: CSV files from web-scraping
-            * SPY.csv
-            * VIX.csv
-        (b) Unemployment.csv: Downloaded from BLS.gov
+            * spy.csv
+            * vix.csv
+        (b) unemployment rate.csv: Downloaded from BLS.gov
 
     2) Images Folder:
         (a) SPY_vs_VIX.png
