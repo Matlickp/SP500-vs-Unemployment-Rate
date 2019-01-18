@@ -86,7 +86,6 @@ Process:
 		- Plot Unemployment Rate
 		
 		
-Charts:
 
 
 
