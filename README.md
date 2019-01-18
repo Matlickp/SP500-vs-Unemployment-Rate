@@ -45,7 +45,7 @@ Process:
 
 4. Download Unemployment Rate from Bureau of Labor Statistics
 	- Save as CSV
-	- Reformat CSV to have date column in yyy/m/d format
+	- Reformat CSV to have date column in yyyy/mm/dd format
 	- Read CSV with pandas
 
 5. Save Data to MongoDB
@@ -95,17 +95,17 @@ Process:
 	 
 Files in the Repository:
 
-    1) Data Folder:
-        (a) Web-Scraping Folder: CSV files from web-scraping
-            * spy.csv
-            * vix.csv
-        (b) unemployment rate.csv: Downloaded from BLS.gov
+1) Data Folder:
+(a) Web-Scraping Folder: CSV files from web-scraping
+    * spy.csv
+    * vix.csv
+(b) unemployment rate.csv: Downloaded from BLS.gov
 
-    2) Images Folder:
-        (a) SPY_vs_VIX.png
-        (b) Unemployment_vs_SPY_VIX.png
+2) Images Folder:
+(a) SPY_vs_VIX.png
+(b) Unemployment_vs_SPY_VIX.png
 
-    3) SPY vs VIX.ipynb: Jupiter notebook with the code
+3) SPY vs VIX.ipynb: Jupiter notebook with the code
 
-    4) ETL_Presentation.ppt: Presentation
+4) ETL_Presentation.ppt: Presentation
 
