@@ -84,6 +84,22 @@ Process:
 	- Add to Subplot1 from first chart
 		- plt.line
 		- Plot Unemployment Rate
+
+
+Files in Repository:
+
+1. Data Folder
+	- spy.csv
+	- vix.csv
+	- unemploment rate.csv
+	
+2. Images Folder
+	- SPY-vs_VIX.png
+	- Unemployment_vs_Market.png
+	
+3. SPY vs VIX.ipynb 
+
+4. ETL_Presenation.pptx
 		
 		
 
@@ -93,19 +109,5 @@ Process:
 		
 	
 	 
-Files in the Repository:
 
-1) Data Folder:
-	(a) Web-Scraping Folder: CSV files from web-scraping
-    		* spy.csv
-    		* vix.csv
-	(b) unemployment rate.csv: Downloaded from BLS.gov
-
-2) Images Folder:
-	(a) SPY_vs_VIX.png
-	(b) Unemployment_vs_SPY_VIX.png
-
-3) SPY vs VIX.ipynb: Jupiter notebook with the code
-
-4) ETL_Presentation.ppt: Presentation
 
