@@ -96,14 +96,14 @@ Process:
 Files in the Repository:
 
 1) Data Folder:
-(a) Web-Scraping Folder: CSV files from web-scraping
-    * spy.csv
-    * vix.csv
-(b) unemployment rate.csv: Downloaded from BLS.gov
+	(a) Web-Scraping Folder: CSV files from web-scraping
+    		* spy.csv
+    		* vix.csv
+	(b) unemployment rate.csv: Downloaded from BLS.gov
 
 2) Images Folder:
-(a) SPY_vs_VIX.png
-(b) Unemployment_vs_SPY_VIX.png
+	(a) SPY_vs_VIX.png
+	(b) Unemployment_vs_SPY_VIX.png
 
 3) SPY vs VIX.ipynb: Jupiter notebook with the code
 
