@@ -1,4 +1,5 @@
-# market-to-unemployment
+# SP500-vs-Unemployment-Rate
+
 Market Data vs Unemployment Rate:
 
 For this project we wanted to look at two relationships that relate to market data and the unemployment  
@@ -9,82 +10,29 @@ compared to the overall unemployment rate. For this analysis we used the past 19
 Volatility Index affects the S&P500 and how that in turn affects the unemloyment rate, could help predict any future spikes
 in unemployment and allow government and private organizations to be proactive in preparing for the needs that will come.
 
-Process:
+## Data Gathering and Cleaning:
 
-1. Collect S&P500 Data
-	-Using pandas datareader 
-	-Ticker (SPY)
-	-Source: Yahoo
-	- Dates
-		- Start 2000/1/1
-		- End 2018/12/31
-		
-	- Save S&P500 to CSV
-	- Remove Open, High, Low, Close columns
-	- Add column (100MA) 
-		- This column is a rolling window that calculates the moving average (MA) over 100 days
-		- You have to set the minimum to 0 in order to get an average of the days before you reach 100
+Using Pandas DataReader, historical data for the SPY and ^VIX is gathered.
+This data can then be used to calculate a 100 day moving average for both indices.
+Then only relevant columns are kept and renamed.
+The tables are then joined and saved into a Mongo Database.
 
-2. Collect Volatility Index Data
-	-Using pandas datareader 
-	-Ticker (^VIX)
-	-Source: Yahoo
-	- Dates
-		- Start 2000/1/1
-		- End 2018/12/31
-		
-	- Save ^VIX to CSV
-	- Remove Open, High, Low, Close columns
-	- Add column (100MA) 
-		- This column is a rolling window that calculates the moving average (MA) over 100 days
-		- You have to set the minimum to 0 in order to get an average of the days before you reach 100
+The Bureau of Labor Statistics then provides a csv for historical unemployment rate.
+This data is also saved into the Mongo Database
 
-3. Join the SPY and VIX 
-	- How = outer
-	- On = Date
+![Market and Employment Data](Images/database tables.png?raw=true "Data"
 
-4. Download Unemployment Rate from Bureau of Labor Statistics
-	- Save as CSV
-	- Reformat CSV to have date column in yyyy/mm/dd format
-	- Read CSV with pandas
+## Visualizing the Data
 
-5. Save Data to MongoDB
-	- Execute "mongod" in gitbash
-	- Connect to client in ipynb
-	- Create DB for market data
-		- Create Collection for the SPY/VIX dataframe
-		- Insert
-	- Create DB for Unemployment
-		- Create Collection for Unemployment dataframe
-		- Insert
-		
-6. Pull Data fromn MongoDB
-	- Use .find for each of the databases that were created
-	- Create Loop through .find results
-	- Append Market Data list with loop
-	- Append Unemployment Rate with loop
-	- Convert lists to dataframes
+The first thing to check is the inverse relationship between the SPY and the ^VIX which we can see here. As the SPY goes up the ^VIX goes down and vice versa.
 
-7. Set "Date" as index for both dataframes
-	- pd.to_datetime to keep them consistent
+![SPY and VIX](Images/SPYvsVIX.png?raw=true "Market Comparison"
 
-8. SPY vs Vix Plot
-	- Create Subplot1 and Subplot2
-	- Subplot1
-		- plt.Line 
-		- Plot the ADJ Close of the SPY
-		- Plot the Moving Average of SPY
-		- Plot the ADJ Close of the VIX
-		- Plot the Moving Average of VIX
-	- Subplot2
-		- plt.bar
-		- Plot the Volume of the SPY
+Next, after mulitplying the unemployment rate by 10 to better visualize, the rate is plotted and the relationship can be analyzed. 
 
-9. Market vs Unemployment
-	- Add to Subplot1 from first chart
-		- plt.line
-		- Plot Unemployment Rate
+![Market and Unemployment](Images/Unemployment vs Market.png?raw=true "Market vs Unemployment")
 
+As you can see, the better the SPY is doing, being used as a proxy for the overall market, the lower the unmployment rate. However, the market can recover a lot quicker than unemployment can.
 
 Files in Repository:
 
