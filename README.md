@@ -20,13 +20,13 @@ The tables are then joined and saved into a Mongo Database.
 The Bureau of Labor Statistics then provides a csv for historical unemployment rate.
 This data is also saved into the Mongo Database
 
-![Market and Employment Data](Images/database tables.png?raw=true "Data"
+![Market and Employment Data](Images/database tables.png?raw=true "Data")
 
 ## Visualizing the Data
 
 The first thing to check is the inverse relationship between the SPY and the ^VIX which we can see here. As the SPY goes up the ^VIX goes down and vice versa.
 
-![SPY and VIX](Images/SPYvsVIX.png?raw=true "Market Comparison"
+![SPY and VIX](Images/SPYvsVIX.png?raw=true "Market Comparison")
 
 Next, after mulitplying the unemployment rate by 10 to better visualize, the rate is plotted and the relationship can be analyzed. 
 
