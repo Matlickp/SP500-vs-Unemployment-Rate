@@ -20,7 +20,7 @@ The tables are then joined and saved into a Mongo Database.
 The Bureau of Labor Statistics then provides a csv for historical unemployment rate.
 This data is also saved into the Mongo Database
 
-![Market and Employment Data](Images/database tables.png?raw=true "Data")
+![Market and Employment Data](Images/database_tables.png?raw=true "Data")
 
 ## Visualizing the Data
 
@@ -30,7 +30,7 @@ The first thing to check is the inverse relationship between the SPY and the ^VI
 
 Next, after mulitplying the unemployment rate by 10 to better visualize, the rate is plotted and the relationship can be analyzed. 
 
-![Market and Unemployment](Images/Unemployment vs Market.png?raw=true "Market vs Unemployment")
+![Market and Unemployment](Images/UnemploymentvsMarket.png?raw=true "Market vs Unemployment")
 
 As you can see, the better the SPY is doing, being used as a proxy for the overall market, the lower the unmployment rate. However, the market can recover a lot quicker than unemployment can.
 
